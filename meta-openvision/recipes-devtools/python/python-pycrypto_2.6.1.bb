@@ -1,4 +1,4 @@
-inherit distutils
+inherit distutils3
 require python-pycrypto.inc
 
 SRC_URI += "file://cross-compiling.patch"

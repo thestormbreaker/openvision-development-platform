@@ -13,7 +13,7 @@ SRC_URI[sha256sum] = "b680ca1b4fabe5ef52024d120f40b8e2ed7d175ed4d67225d2c477dac7
 
 S = "${WORKDIR}/mechanize-${PV}"
 
-inherit setuptools
+inherit setuptools3
 
 FILES_${PN}-src_append = " \
     ${libdir}/${PYTHON_DIR}/site-packages/mechanize-0.4.2-py2.7.egg-info/* \

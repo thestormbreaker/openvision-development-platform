@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.TXT;md5=4fbd65380cdd255951079008b364516c"
 DEPENDS += "libxml2 zlib python swig-native curl python"
 RDEPENDS_${PN} += "libcurl enigma2 python-compression python-lzma xz"
 
-inherit gitpkgv python-dir rm_python_pyc compile_python_pyo no_python_src
+inherit gitpkgv python3-dir rm_python_pyc compile_python_pyo no_python_src
 
 SRC_URI = "git://github.com/oe-alliance/e2openplugin-CrossEPG.git;protocol=git"
 

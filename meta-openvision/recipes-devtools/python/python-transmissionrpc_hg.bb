@@ -10,4 +10,4 @@ SRC_URI = "hg://bitbucket.org/blueluna;protocol=http;module=transmissionrpc;rev=
 
 S = "${WORKDIR}/transmissionrpc"
 
-inherit setuptools
+inherit setuptools3

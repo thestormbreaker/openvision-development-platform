@@ -14,6 +14,6 @@ SRC_URI[sha256sum] = "07c2447a1d44cbb27c90b8c6a5c98e890cc1853c6223e2a52195cddec2
 
 S = "${WORKDIR}/icalendar-${PV}"
 
-inherit setuptools
+inherit setuptools3
 
 include python-package-split.inc

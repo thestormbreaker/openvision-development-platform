@@ -12,5 +12,5 @@ SRC_URI[sha256sum] = "63d3bad8b29337cfd1c8b96e403dc0fe61e437a118eeff0c1eaa109c96
 
 S = "${WORKDIR}/google-api-python-client-1.4.1/"
 
-inherit setuptools
+inherit setuptools3
 include python-package-split.inc

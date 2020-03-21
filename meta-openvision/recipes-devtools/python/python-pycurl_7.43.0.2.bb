@@ -19,7 +19,7 @@ SRC_URI[sha256sum] = "0f0cdfc7a92d4f2a5c44226162434e34f7d6967d3af416a6f1448649c0
 
 S = "${WORKDIR}/pycurl-${PV}"
 
-inherit distutils
+inherit distutils3
 
 BBCLASSEXTEND = "native"
 

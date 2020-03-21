@@ -8,6 +8,6 @@ DEPENDS += "python-pip"
 SRC_URI[md5sum] = "310c2dfd64eb6f0df44aa8c59f2334a7"
 SRC_URI[sha256sum] = "5d8534c8e185f2d8a1fda1ef73f2c8f4b23264e8e30063feeb9511d492a413e1"
 
-inherit pypi setuptools
+inherit pypi setuptools3
 
 BBCLASSEXTEND = "native nativesdk"

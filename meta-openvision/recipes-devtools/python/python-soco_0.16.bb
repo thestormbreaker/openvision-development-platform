@@ -13,7 +13,7 @@ SRC_URI[sha256sum] = "7bed4475e3f134283af1f520a9b2e6ce2a8e69bdc1b58ee68528b3d093
 
 S = "${WORKDIR}/soco-${PV}"
 
-inherit setuptools
+inherit setuptools3
 
 include python-package-split.inc
 
