@@ -78,7 +78,7 @@ DEPENDS = "\
     libupnp \
     minidlna \
     neon \
-    python-beautifulsoup4 python-dnspython python-gdata python-icalendar python-lxml python-pexpect python-pyamf python-pyusb python-simplejson \
+    python3-beautifulsoup4 python3-dnspython python-icalendar python3-lxml python3-pexpect python-pyamf python3-pyusb python3-simplejson \
     satipclient \
     ${@bb.utils.contains_any("MACHINE_FEATURES", "streamproxy transcoding multitranscoding", "${TRANSCODING_CHECK}", "", d)} \
     "
@@ -94,11 +94,11 @@ DESCRIPTION_enigma2-plugin-extensions-gbipboxclient = "GigaBlue IPBox Client"
 RDEPENDS_enigma2-plugin-extensions-gbipboxclient = "cifs-utils"
 DESCRIPTION_enigma2-plugin-extensions-lcd4linux = "Web/DPF/Samsung LCD control"
 DEPENDS_enigma2-plugin-extensions-lcd4linux = "bitratecalc lcd4linux png-util"
-RDEPENDS_enigma2-plugin-extensions-lcd4linux = "bitratecalc lcd4linux python-icalendar python-pyusb python-codecs python-datetime python-imaging python-textutils python-twisted-web python-shell python-ctypes libusb1 python-mutagen python-zlib python-email python-subprocess python-simplejson python-soco"
+RDEPENDS_enigma2-plugin-extensions-lcd4linux = "bitratecalc lcd4linux python-icalendar python3-pyusb python3-codecs python3-datetime python3-imaging python3-twisted-web python3-shell python3-ctypes libusb1 python-mutagen python3-email python3-simplejson python-soco"
 FILES_enigma2-plugin-extensions-lcd4linux_append = "${libdir}/enigma2/python/Components/Renderer/*.pyo ${libdir}/enigma2/python/Plugins/Extensions/LCD4linux/plugin.py"
 FILES_enigma2-plugin-extensions-lcd4linux-src_append = "${libdir}/enigma2/python/Components/Renderer/*.py"
 DESCRIPTION_enigma2-plugin-extensions-ondemand = "Watch on demand TV."
-RDEPENDS_enigma2-plugin-extensions-ondemand = "python-beautifulsoup python-dnspython python-lxml python-pyamf python-simplejson"
+RDEPENDS_enigma2-plugin-extensions-ondemand = "python3-beautifulsoup python3-dnspython python3-lxml python-pyamf python3-simplejson"
 DESCRIPTION_enigma2-plugin-extensions-rcuselect = "Change Remote for Amlogic"
 DESCRIPTION_enigma2-plugin-extensions-rezap = "ReZap Sync Tool for Wetek"
 DESCRIPTION_enigma2-plugin-extensions-streamtv = "iptv player"
@@ -106,7 +106,7 @@ RDEPENDS_enigma2-plugin-extensions-streamtv = "rtmpdump"
 DESCRIPTION_enigma2-plugin-extensions-tunerserver = "Builds a virtual channels list"
 DESCRIPTION_enigma2-plugin-extensions-webbrowser = "Webbrowser launcher"
 FILES_enigma2-plugin-extensions-webbrowser_append = "${datadir}/keymaps"
-RDEPENDS_enigma2-plugin-extensions-webbrowser = "python-gdata libqtwebkite4 webbrowser-utils qt4-embedded-fonts qt4-embedded-plugin-imageformat-gif qt4-embedded-plugin-imageformat-ico qt4-embedded-plugin-imageformat-jpeg qt4-embedded-plugin-imageformat-mng qt4-embedded-plugin-imageformat-svg qt4-embedded-plugin-imageformat-tiff qt4-embedded-plugin-iconengine-svgicon"
+RDEPENDS_enigma2-plugin-extensions-webbrowser = "libqtwebkite4 webbrowser-utils qt4-embedded-fonts qt4-embedded-plugin-imageformat-gif qt4-embedded-plugin-imageformat-ico qt4-embedded-plugin-imageformat-jpeg qt4-embedded-plugin-imageformat-mng qt4-embedded-plugin-imageformat-svg qt4-embedded-plugin-imageformat-tiff qt4-embedded-plugin-iconengine-svgicon"
 DESCRIPTION_enigma2-plugin-systemplugins-abmcustommiximporter = "Imports ABM CustomMix files from Github."
 DESCRIPTION_enigma2-plugin-systemplugins-audioeffect = "Audio Effect setup"
 DESCRIPTION_enigma2-plugin-systemplugins-blindscan = "blindscan"

@@ -80,18 +80,18 @@ OPTIONAL_PACKAGES += "\
 	procps \
 	pv \
 	pyload \
-	python-beautifulsoup4 \
-	python-futures \
-	python-iso3166 \
-	python-iso639 \
-	python-isodate \
-	python-js2py \
-	python-lxml \
+	python3-beautifulsoup4 \
+	python3-futures \
+	python3-iso3166 \
+	python3-iso639 \
+	python3-isodate \
+	python3-js2py \
+	python3-lxml \
 	python-mechanize \
-	python-ntplib \
-	python-pip \
-	python-pyexecjs \
-	python-requests \
+	python3-ntplib \
+	python3-pip \
+	python3-pyexecjs \
+	python3-requests \
 	python-singledispatch \
 	python-websocket \
 	${@bb.utils.contains("TARGET_FPU", "soft", "", "rclone", d)} \

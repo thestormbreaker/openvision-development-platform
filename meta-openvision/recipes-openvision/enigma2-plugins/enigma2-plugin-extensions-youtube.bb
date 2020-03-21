@@ -15,13 +15,12 @@ PV = "1+git${SRCPV}"
 PKGV = "1+git${GITPKGV}"
 
 RDEPENDS_${PN} = " \
-	python-core \
-	python-codecs \
-	python-json \
-	python-netclient \
-	python-pyopenssl \
-	python-zlib \
-	python-twisted-web \
+	python3-core \
+	python3-codecs \
+	python3-json \
+	python3-netclient \
+	python3-pyopenssl \
+	python3-twisted \
 	"
 
 RDEPENDS_{PN}-src = "${PN}"

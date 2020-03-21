@@ -4,7 +4,7 @@ SECTION = "misc"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
-RDEPENDS_${PN} += "python-requests python-subprocess python-imaging enigma2-plugin-systemplugins-mphelp python-lxml"
+RDEPENDS_${PN} += "python3-requests enigma2-plugin-systemplugins-mphelp python-lxml"
 
 inherit gitpkgv allarch
 

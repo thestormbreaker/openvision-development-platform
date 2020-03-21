@@ -152,17 +152,16 @@ DEPENDS = "\
     libshowiframe \
     libtirpc \
     nmap \
-    python-gdata \
     python-httplib2 \
     python-google-api-client \
     python-mutagen \
-    python-pyopenssl \
-    python-twisted \
+    python3-pyopenssl \
+    python3-twisted \
     python-youtube-dl \
     streamripper \
     "
 
-RDEPENDS_${PN} = "python-ctypes"
+RDEPENDS_${PN} = "python3-ctypes"
 
 CFLAGS += "-I${STAGING_INCDIR}/tirpc"
 LDFLAGS += "-ltirpc"

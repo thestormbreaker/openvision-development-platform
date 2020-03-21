@@ -13,7 +13,7 @@ SRC_URI = " \
 
 S = "${WORKDIR}/PythonDaap-${PV}"
 
-RDEPENDS_${PN} = "python-compression"
+RDEPENDS_${PN} = "python3-compression"
 
 
 SRC_URI[md5sum] = "b3db3d60b0ee83f5f23101d2c3bb99e0"

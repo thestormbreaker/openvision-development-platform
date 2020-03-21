@@ -12,7 +12,7 @@ DEPENDS = "\
 	libdreamdvd libdvbsi++ fribidi libmad libpng libsigc++-2.0 giflib libxml2 \
 	${@bb.utils.contains("MACHINE_FEATURES", "uianimation", "libvugles2-${MACHINE} libgles-${MACHINE}", "", d)} \
 	openssl libudfread \
-	python-imaging python-twisted python-wifi \
+	python3-twisted python-wifi \
 	swig-native \
 	tuxtxt-enigma2 \
 	"
@@ -62,27 +62,24 @@ RRECOMMENDS_${PN} = "\
 	"
 
 PYTHON_RDEPS = "\
-	python-codecs \
-	python-core \
-	python-crypt \
-	python-fcntl \
-	${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash", "", "python-image python-imaging python-service-identity", d)} \
-	python-lang \
-	python-mmap \
-	python-netclient \
-	python-netserver \
-	python-numbers \
-	python-pickle \
+	python3-codecs \
+	python3-core \
+	python3-crypt \
+	python3-fcntl \
+	${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash", "", "python3-image python3-imaging python-service-identity", d)} \
+	python3-mmap \
+	python3-netclient \
+	python3-netserver \
+	python3-numbers \
+	python3-pickle \
 	python-process \
-	python-pyusb \
-	python-re \
-	python-shell \
-	python-threading \
-	python-twisted-core \
-	python-twisted-web \
-	python-xml \
-	python-zlib \
-	python-zopeinterface \
+	python3-pyusb \
+	python3-shell \
+	python3-threading \
+	python3-twisted-core \
+	python3-twisted-web \
+	python3-xml \
+	python3-zopeinterface \
 	"
 
 # DVD and iso playback is integrated, we need the libraries
@@ -104,12 +101,12 @@ DESCRIPTION_append_enigma2-plugin-systemplugins-positionersetup = "helps you ins
 DESCRIPTION_append_enigma2-plugin-systemplugins-satelliteequipmentcontrol = "allows you to fine-tune DiSEqC-settings."
 DESCRIPTION_append_enigma2-plugin-systemplugins-satfinder = "helps you to align your dish."
 DESCRIPTION_append_enigma2-plugin-systemplugins-videomode = "selects advanced video modes"
-RDEPENDS_enigma2-plugin-systemplugins-softwaremanager = "python-twisted-web"
+RDEPENDS_enigma2-plugin-systemplugins-softwaremanager = "python3-twisted-web"
 DESCRIPTION_append_enigma2-plugin-systemplugins-wirelesslan = "helps you configuring your wireless lan"
 RDEPENDS_enigma2-plugin-systemplugins-wirelesslan = "wpa-supplicant wireless-tools python-wifi"
 DESCRIPTION_append_enigma2-plugin-systemplugins-networkwizard = "provides easy step by step network configuration"
 # Note that these tools lack recipes
-RDEPENDS_enigma2-plugin-extensions-dvdburn = "dvd+rw-tools dvdauthor mjpegtools cdrkit python-imaging ${DEMUXTOOL}"
+RDEPENDS_enigma2-plugin-extensions-dvdburn = "dvd+rw-tools dvdauthor mjpegtools cdrkit ${DEMUXTOOL}"
 RRECOMMENDS_enigma2-plugin-extensions-dvdplayer = "kernel-module-udf"
 RDEPENDS_enigma2-plugin-systemplugins-hotplug = "hotplug-e2-helper"
 
@@ -122,8 +119,8 @@ ALLOW_EMPTY_enigma2-plugin-font-wqy-microhei = "1"
 # the RDEPENDS for the plugins above, preventing [build-deps] warnings.
 RDEPENDS_${PN}-build-dependencies = "\
 	aio-grab \
-	dvd+rw-tools dvdauthor mjpegtools cdrkit python-imaging ${DEMUXTOOL} \
-	python-twisted-web \
+	dvd+rw-tools dvdauthor mjpegtools cdrkit ${DEMUXTOOL} \
+	python3-twisted-web \
 	wpa-supplicant wireless-tools python-wifi \
 	"
 

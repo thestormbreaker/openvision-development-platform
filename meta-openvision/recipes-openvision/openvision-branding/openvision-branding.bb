@@ -2,7 +2,7 @@ DESCRIPTION = "Open Vision branding lib"
 MAINTAINER = "Open Vision Developers"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-DEPENDS = "python"
+DEPENDS = "python3"
 
 require conf/license/openvision-gplv2.inc
 

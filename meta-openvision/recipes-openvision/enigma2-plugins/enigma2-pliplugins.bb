@@ -2,7 +2,6 @@ LICENSE = "GPLv2+"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=751419260aa954499f7abaabaa882bbe"
 # There's only one working plugin in this repository
 PACKAGES = "enigma2-plugin-extensions-openuitzendinggemist"
-RDEPENDS_enigma2-plugin-extensions-openuitzendinggemist = "python-argparse"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 

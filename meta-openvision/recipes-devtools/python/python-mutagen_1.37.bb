@@ -4,8 +4,8 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 SRCNAME = "mutagen"
 
-DEPENDS = "python"
-RDEPENDS_${PN} = "python-shell"
+DEPENDS = "python3"
+RDEPENDS_${PN} = "python3-shell"
 
 SRC_URI = "https://github.com/quodlibet/mutagen/archive/release-${PV}.tar.gz"
 

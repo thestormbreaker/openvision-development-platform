@@ -15,6 +15,6 @@ RDEPENDS_${PN} += " \
 
 # -native is needed to build python[3]-twisted, however, we need to take steps to
 # prevent a circular dependency. The build apparently does not use the part of
-# python-incremental which uses python-twisted, so this hack is OK.
+# python-incremental which uses python3-twisted, so this hack is OK.
 RDEPENDS_${PYTHON_PN}-incremental-native_remove = "${PYTHON_PN}-twisted-native"
 BBCLASSEXTEND = "native nativesdk"
