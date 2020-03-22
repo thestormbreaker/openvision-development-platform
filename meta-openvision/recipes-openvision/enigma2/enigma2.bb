@@ -128,7 +128,7 @@ RRECOMMENDS_${PN}-build-dependencies = "kernel-module-udf"
 
 inherit gitpkgv python3native upx_compress autotools pkgconfig rm_python_pyc compile_python_pyo
 
-ENIGMA2_BRANCH ?= "develop"
+ENIGMA2_BRANCH ?= "python3"
 PV = "develop+git${SRCPV}"
 PKGV = "develop+git${GITPKGV}"
 
