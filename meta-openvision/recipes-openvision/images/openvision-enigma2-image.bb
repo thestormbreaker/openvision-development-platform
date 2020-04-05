@@ -37,9 +37,9 @@ EXTRA_KERNEL_WIFI_DRIVERS_remove_sh4 += "\
 
 MACHINE_SPECIFIC_VFD = "${@bb.utils.contains_any("MACHINE", "gbquad4k gbue4k gbx34k gb800se gb800seplus gb800solo gb800ue gb800ueplus gbipbox gbip4k gbquad gbquadplus gbultrase gbultraue gbultraueh gbx1 gbx2 gbx3 gbx3h sezam1000hd xpeedlx mbmini atemio5x00 bwidowx atemio6000 atemio6100 atemio6200 mbminiplus mbhybrid bwidowx2 beyonwizt2 opticumtt evoslim sf128 sf138 bre2zet2c bre2ze4k et1x000 g100 g101 hd51 hd1100 hd1200 hd1265 hd1500 hd500c hd530c formuler3 formuler4 formuler4turbo tiviarmin xcombo enibox mago x1plus sf108 t2cable 9910lx 9911lx 9920lx e4hdcombo odin2hybrid odinplus sh1 h3 h5 h7 lc vs1000 enfinity marvel1 bre2ze xp1000 classm axodin axodinc starsatlx genius evo galaxym6 9900lx sf8008 sf8008m spycat spycatmini spycatminiplus bcm7358 vp7358ci osnino osninoplus gbtrio4k", "", "enigma2-plugin-systemplugins-vfdcontrol", d)}"
 
-BACKUPSUITE_CHECK = "${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash nogamma rpi-vision", "", "enigma2-plugin-extensions-backupsuite", d)}"
+BACKUPSUITE_CHECK = "${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash nogamma rpi-vision", "", "", d)}"
 
-BLINDSCAN_CHECK = "${@bb.utils.contains("MACHINE_FEATURES", "dreambox", "enigma2-plugin-systemplugins-dmblindscan", "enigma2-plugin-systemplugins-blindscan", d)}"
+BLINDSCAN_CHECK = "${@bb.utils.contains("MACHINE_FEATURES", "dreambox", "", "enigma2-plugin-systemplugins-blindscan", d)}"
 
 TRANSCODING_CHECK = "${@bb.utils.contains_any("MACHINE_FEATURES", "vuplus gigablue dags", "transtreamproxy", "streamproxy", d)}"
 
@@ -76,31 +76,19 @@ ENIGMA2_PLUGINS += "\
 	enigma2-plugin-systemplugins-videotune \
 	enigma2-plugin-systemplugins-wirelesslan \
 	${@bb.utils.contains("MACHINE_FEATURES", "smallflash", "", " \
-	enigma2-plugin-extensions-autobackup \
-	enigma2-plugin-extensions-tmbd \
-	enigma2-plugin-extensions-epgimport \
 	enigma2-plugin-extensions-epgrefresh \
 	enigma2-plugin-extensions-reconstructapsc \
 	enigma2-plugin-skins-octetfhd \
 	enigma2-plugin-softcams-oscam \
-	enigma2-plugin-systemplugins-mountmanager \
-	enigma2-plugin-systemplugins-osd3dsetup \
-	enigma2-plugin-systemplugins-terrestrialscan", d)} \
+	enigma2-plugin-systemplugins-osd3dsetup", d)} \
 	${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash", "", " \
-	enigma2-plugin-extensions-e2iplayer \
-	enigma2-plugin-extensions-filecommander \
-	enigma2-plugin-extensions-keyadder \
-	enigma2-plugin-extensions-openwebif-vision-terminal \
-	enigma2-plugin-systemplugins-autobouquetsmaker", d)} \
-	${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash libeplayer", "", "enigma2-plugin-systemplugins-serviceapp", d)} \
+	enigma2-plugin-extensions-openwebif-vision-terminal", d)} \
 	"
 
 DEPENDS += "\
 	${@bb.utils.contains("MACHINE_FEATURES", "blindscan-tbs", "blindscan-s2" , "", d)} \
 	enigma2 \
-	enigma2-alliance-plugins \
 	enigma2-locale-meta \
-	enigma2-persianempire-plugins \
 	enigma2-plugins \
 	"
 

@@ -15,7 +15,7 @@ S = "${WORKDIR}"
 RREPLACES_${PN} = "enigma2-plugin-extensions-xmltvimport-rytec"
 RCONFLICTS_${PN} = "enigma2-plugin-extensions-xmltvimport-rytec"
 
-DEPENDS = "enigma2-plugin-extensions-epgimport"
+# DEPENDS = "enigma2-plugin-extensions-epgimport"
 
 PACKAGES = "${PN}"
 

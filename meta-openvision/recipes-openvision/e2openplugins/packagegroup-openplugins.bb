@@ -41,7 +41,6 @@ DEPENDS = " \
 	enigma2-plugin-extensions-cacheflush \
 	enigma2-plugin-extensions-analogclock \
 	enigma2-plugin-extensions-epgimportfilter \
-	enigma2-plugin-systemplugins-autobouquetsmaker \
 	enigma2-plugin-extensions-telekomsport \
 	enigma2-plugin-extensions-oscamstatus \
 	enigma2-plugin-extensions-blackoutblind \

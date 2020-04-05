@@ -157,7 +157,6 @@ DEPENDS = "\
     python-mutagen \
     python3-pyopenssl \
     python3-twisted \
-    python-youtube-dl \
     streamripper \
     "
 

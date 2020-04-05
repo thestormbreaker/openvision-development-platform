@@ -21,11 +21,9 @@ RDEPENDS_${PN} = " \
 	f4mdump \
 	ffmpeg \
 	hlsdl \
-	iptvsubparser \
 	lsdir \
 	python3-compression \
 	python3-core \
-	python-e2icjson \
 	python3-html \
 	python3-json \
 	python3-pycurl \
