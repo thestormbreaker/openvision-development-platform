@@ -1,0 +1,44 @@
+From b6a70b1a95b263b16a47ddc9b11690e3a05e4ce1 Mon Sep 17 00:00:00 2001
+From: Hains van den Bosch <hainsvdbosch@ziggo.nl>
+Date: Mon, 27 Jan 2020 06:16:09 +0100
+Subject: [PATCH] Map python2 c api functions to python3 ones
+
+---
+ servicemp3/pythonmodule.cpp | 17 ++++++++++++++---
+ 1 file changed, 14 insertions(+), 3 deletions(-)
+
+diff --git a/servicemp3/pythonmodule.cpp b/servicemp3/pythonmodule.cpp
+index b99864b..20bae86 100644
+--- a/servicemp3/pythonmodule.cpp
++++ b/servicemp3/pythonmodule.cpp
+@@ -1,13 +1,24 @@
+ #include "servicemp3.h"
+ 
+-
+ static PyMethodDef servicemp3Methods[] =
+ {
+-	 {NULL,NULL,0,NULL}
++	{NULL,NULL,0,NULL}
++};
++
++static struct PyModuleDef eBase_moduledef = {
++	PyModuleDef_HEAD_INIT,
++	"servicemp3",         /* m_name */
++	"servicemp3",        /* m_doc */
++	-1,                  /* m_size */
++	servicemp3Methods,   /* m_methods */
++	NULL,                /* m_reload */
++	NULL,                /* m_traverse */
++	NULL,                /* m_clear */
++	NULL,                /* m_free */
+ };
+ 
+ PyMODINIT_FUNC
+ initservicemp3(void)
+ {
+-	Py_InitModule("servicemp3", servicemp3Methods);
++	PyModule_Create(&eBase_moduledef);
+ }
+-- 
+2.20.1
+

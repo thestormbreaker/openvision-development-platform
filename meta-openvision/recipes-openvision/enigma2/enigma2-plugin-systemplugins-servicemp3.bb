@@ -87,6 +87,7 @@ RDEPENDS_${PN} = "\
 	"
 
 SRC_URI = "${@bb.utils.contains("MACHINE_FEATURES", "nogamma", "git://github.com/OpenVisionE2/servicemp3amlogic.git", "git://github.com/OpenVisionE2/servicemp3.git;branch=master", d)}"
+SRC_URI +="file://0001-Map-python2-c-api-functions-to-python3-ones.patch"
 
 S = "${WORKDIR}/git"
 
