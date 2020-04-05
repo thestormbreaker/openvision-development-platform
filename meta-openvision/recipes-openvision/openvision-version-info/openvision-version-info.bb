@@ -62,7 +62,7 @@ do_install() {
 	echo "${VISIONVERSION}" > ${D}${sysconfdir}/visionversion
 	echo "${VISIONREVISION}" > ${D}${sysconfdir}/visionrevision
 	install -d ${D}${libdir}/python2.7
-	install -m 0644 ${WORKDIR}/ov.pyo ${D}${libdir}/python2.7
+	install -m 0644 ${WORKDIR}/ov.py ${D}${libdir}/python2.7
 }
 
 pkg_postinst_ontarget_${PN} () {
