@@ -16,16 +16,6 @@ RDEPENDS_${PN} = "enigma2-plugin-skincomponents-weathercomponent enigma2-plugin-
 
 S = "${WORKDIR}/git"
 
-do_compile() {
-	python2 -O -m compileall ${S}/usr/lib/
-}
-
-do_install() {
-	install -d ${D}${libdir}
-	cp -r ${S}/usr/lib/* ${D}${libdir}/
-}
-
-
 python populate_packages_prepend() {
     enigma2_plugindir = bb.data.expand('${libdir}/enigma2/python/Plugins', d)
     do_split_packages(d, enigma2_plugindir, '^(\w+/\w+)/[a-zA-Z0-9_]+.*$', 'enigma2-plugin-%s', 'Enigma2 Plugin: %s', recursive=True, match_path=True, prepend=True)
