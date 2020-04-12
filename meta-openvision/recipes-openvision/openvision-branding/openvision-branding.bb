@@ -15,7 +15,9 @@ PR[vardepsexclude] += "DATE"
 
 do_configure[nostamp] = "1"
 
-SRC_URI="git://github.com/OpenVisionE2/branding-module.git;protocol=git"
+SRC_URI="git://github.com/OpenVisionE2/branding-module.git;protocol=git \
+         file://0001-Map-c-api-functions-to-python3.patch \
+"
 
 S = "${WORKDIR}/git"
 
@@ -58,7 +60,6 @@ EXTRA_OECONF = " \
     --with-transcoding="${TRANSCODING}" \
     --with-multitranscoding="${MULTITRANSCODING}" \
     --with-multilib="${HAVE_MULTILIB}" \
-    --with-python3="${HAVE_PYTHON3}" \
     "
 
 FILES_${PN} = "${libdir}/enigma2/python/*.so"
