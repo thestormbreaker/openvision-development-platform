@@ -22,11 +22,6 @@ EXTRA_OECONF = "--with-configdir=${sysconfdir} \
 	${@bb.utils.contains("MACHINE_FEATURES", "nogamma", "--with-nogamma" , "", d)} \
 	"
 
-do_install_append() {
-	# remove unused .pyc files
-	find ${D}${libdir}/enigma2/python/ -name '*.pyc' -exec rm {} \;
-}
-
 PACKAGES = "${PN}-src ${PN}-dbg ${PN}-dev ${PN}"
 FILES_${PN}-src = "/usr/src ${libdir}/enigma2/python/Plugins/Extensions/Tuxtxt/*.py"
 FILES_${PN} = "${libdir}/libtuxtxt32bpp.so.* ${datadir}/fonts ${libdir}/enigma2/python/Plugins/Extensions/Tuxtxt/*.pyo ${sysconfdir}/tuxtxt"
