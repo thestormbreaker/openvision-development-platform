@@ -218,9 +218,6 @@ FILES_${PN}-dbg += "\
 	${libdir}/enigma2/python/*/*/*/*/*/*/*/*/*/*.debug \
 	"
 
-# Swig generated 200k enigma.py file has no purpose for end users
-# Save some space by not installing sources (mytest.py must remain)
-
 do_install_append() {
 	install -d ${D}${datadir}/keymaps
 	if [ "${@bb.utils.contains("MACHINE_FEATURES", "multilib", "1", "0", d)}" = "1" ]; then
