@@ -1,27 +1,29 @@
-From b6a70b1a95b263b16a47ddc9b11690e3a05e4ce1 Mon Sep 17 00:00:00 2001
-From: Hains van den Bosch <hainsvdbosch@ziggo.nl>
-Date: Mon, 27 Jan 2020 06:16:09 +0100
+From b1ccc4e9e49a5567309fe4e4c14ff4bf4d97b0ed Mon Sep 17 00:00:00 2001
+From: Hains <hainsvdbosch@ziggo.nl>
+Date: Thu, 16 Apr 2020 20:35:08 +0200
 Subject: [PATCH] Map python2 c api functions to python3 ones
 
 ---
- servicemp3/pythonmodule.cpp | 17 ++++++++++++++---
- 1 file changed, 14 insertions(+), 3 deletions(-)
+ servicemp3/pythonmodule.cpp | 18 ++++++++++++++----
+ servicemp3/servicemp3.h     |  2 ++
+ 2 files changed, 16 insertions(+), 4 deletions(-)
 
 diff --git a/servicemp3/pythonmodule.cpp b/servicemp3/pythonmodule.cpp
-index b99864b..20bae86 100644
+index 8a4f619..c126fe1 100644
 --- a/servicemp3/pythonmodule.cpp
 +++ b/servicemp3/pythonmodule.cpp
-@@ -1,13 +1,24 @@
+@@ -1,13 +1,23 @@
  #include "servicemp3.h"
  
 -
  static PyMethodDef servicemp3Methods[] =
  {
--	 {NULL,NULL,0,NULL}
-+	{NULL,NULL,0,NULL}
-+};
-+
-+static struct PyModuleDef eBase_moduledef = {
+ 	{NULL,NULL,0,NULL}
+ };
+ 
+-PyMODINIT_FUNC
+-initservicemp3(void)
++static struct PyModuleDef servicemp3_moduledef = {
 +	PyModuleDef_HEAD_INIT,
 +	"servicemp3",         /* m_name */
 +	"servicemp3",        /* m_doc */
@@ -31,14 +33,26 @@ index b99864b..20bae86 100644
 +	NULL,                /* m_traverse */
 +	NULL,                /* m_clear */
 +	NULL,                /* m_free */
- };
- 
- PyMODINIT_FUNC
- initservicemp3(void)
++};
++
++PyObject* PyInit_servicemp3(void)
  {
 -	Py_InitModule("servicemp3", servicemp3Methods);
-+	PyModule_Create(&eBase_moduledef);
++	PyModule_Create(&servicemp3_moduledef);
  }
+diff --git a/servicemp3/servicemp3.h b/servicemp3/servicemp3.h
+index 50f619f..89972e1 100644
+--- a/servicemp3/servicemp3.h
++++ b/servicemp3/servicemp3.h
+@@ -10,6 +10,8 @@
+ /* for subtitles */
+ #include <lib/gui/esubtitle.h>
+ 
++extern "C" PyObject* PyInit_servicemp3(void);
++
+ class eStaticServiceMP3Info;
+ 
+ class eServiceFactoryMP3: public iServiceHandler
 -- 
 2.20.1
 
