@@ -22,7 +22,6 @@ EXTRA_OECONF = "--with-configdir=${sysconfdir} \
 	${@bb.utils.contains("MACHINE_FEATURES", "nogamma", "--with-nogamma" , "", d)} \
 	"
 
-PACKAGES = "${PN}-src ${PN}-dbg ${PN}-dev ${PN}"
-FILES_${PN}-src = "/usr/src ${libdir}/enigma2/python/Plugins/Extensions/Tuxtxt/*.py"
+PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
 FILES_${PN} = "${libdir}/libtuxtxt32bpp.so.* ${datadir}/fonts ${libdir}/enigma2/python/Plugins/Extensions/Tuxtxt/*.pyo ${sysconfdir}/tuxtxt"
 CONFFILES_${PN} = "${sysconfdir}/tuxtxt/tuxtxt2.conf"
