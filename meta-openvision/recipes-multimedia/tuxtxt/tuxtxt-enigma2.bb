@@ -8,7 +8,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 DEPENDS = "freetype libtuxtxt"
 
-inherit gitpkgv autotools pkgconfig
+inherit gitpkgv autotools pkgconfig python3native
 
 SRC_URI = "git://github.com/OpenVisionE2/tuxtxt.git;protocol=git"
 
