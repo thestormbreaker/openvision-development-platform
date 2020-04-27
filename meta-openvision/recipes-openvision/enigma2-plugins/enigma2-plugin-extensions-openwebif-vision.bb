@@ -27,6 +27,7 @@ PKGV = "git${GITPKGV}"
 
 SRC_URI = "git://github.com/OpenVisionE2/OpenWebif.git;protocol=git \
 			file://fix-import-urllib.patch \
+			file://fix-escape-as-html-escape-import.patch \
 			file://replace-iteritems-by-items.patch \
 "
 
