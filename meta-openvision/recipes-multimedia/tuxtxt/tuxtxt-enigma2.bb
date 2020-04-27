@@ -23,5 +23,5 @@ EXTRA_OECONF = "--with-configdir=${sysconfdir} \
 	"
 
 PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
-FILES_${PN} = "${libdir}/libtuxtxt32bpp.so.* ${datadir}/fonts ${libdir}/enigma2/python/Plugins/Extensions/Tuxtxt/*.py* ${sysconfdir}/tuxtxt"
+FILES_${PN} = "${libdir}/libtuxtxt32bpp.so.* ${datadir}/fonts ${libdir}/enigma2/python/Plugins/Extensions/Tuxtxt/* ${sysconfdir}/tuxtxt"
 CONFFILES_${PN} = "${sysconfdir}/tuxtxt/tuxtxt2.conf"
