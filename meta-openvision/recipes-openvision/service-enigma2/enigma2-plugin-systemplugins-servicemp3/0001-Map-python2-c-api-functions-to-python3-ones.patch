@@ -35,24 +35,11 @@ index 8a4f619..c126fe1 100644
 +	NULL,                /* m_free */
 +};
 +
-+PyObject* PyInit_servicemp3(void)
++PyMODINIT_FUNC PyInit_servicemp3(void)
  {
 -	Py_InitModule("servicemp3", servicemp3Methods);
 +	PyModule_Create(&servicemp3_moduledef);
  }
-diff --git a/servicemp3/servicemp3.h b/servicemp3/servicemp3.h
-index 50f619f..89972e1 100644
---- a/servicemp3/servicemp3.h
-+++ b/servicemp3/servicemp3.h
-@@ -10,6 +10,8 @@
- /* for subtitles */
- #include <lib/gui/esubtitle.h>
- 
-+extern "C" PyObject* PyInit_servicemp3(void);
-+
- class eStaticServiceMP3Info;
- 
- class eServiceFactoryMP3: public iServiceHandler
 -- 
 2.20.1
 
