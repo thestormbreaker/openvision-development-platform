@@ -38,7 +38,7 @@ index 8a4f619..c126fe1 100644
 +PyMODINIT_FUNC PyInit_servicemp3(void)
  {
 -	Py_InitModule("servicemp3", servicemp3Methods);
-+	PyModule_Create(&servicemp3_moduledef);
++	return PyModule_Create(&servicemp3_moduledef);
  }
 -- 
 2.20.1
