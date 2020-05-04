@@ -25,11 +25,7 @@ inherit gitpkgv distutils-openplugins gettext
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
 
-SRC_URI = "git://github.com/OpenVisionE2/OpenWebif.git;protocol=git \
-			file://fix-import-urllib.patch \
-			file://fix-escape-as-html-escape-import.patch \
-			file://replace-iteritems-by-items.patch \
-"
+SRC_URI = "git://github.com/OpenVisionE2/OpenWebif.git;branch=python3;protocol=git"
 
 SRC_URI_append_sh4 += " file://revert_grab_for_sh4.patch "
 
