@@ -6,8 +6,8 @@ LIC_FILES_CHKSUM = "file://README.rst;beginline=166;endline=182;md5=12700bdc5283
                     file://COPYING-LGPL;md5=4fbd65380cdd255951079008b364516c \
                     file://COPYING-MIT;md5=7ba8b7264d9ea6da77feda54688adbd7"
 
-DEPENDS = "curl python"
-RDEPENDS_${PN} = "python-core curl"
+DEPENDS = "curl python3"
+RDEPENDS_${PN} = "python3-core curl"
 
 SRC_URI = "\
         https://files.pythonhosted.org/packages/e8/e4/0dbb8735407189f00b33d84122b9be52c790c7c3b25286826f4e1bdb7bde/pycurl-${PV}.tar.gz \

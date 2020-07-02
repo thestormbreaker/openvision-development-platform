@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-2.0;md5=801f80980d171dd6425
 
 inherit allarch gitpkgv update-rc.d
 
-RDEPENDS_${PN} = "eti-tools python-core tsniv2ni"
+RDEPENDS_${PN} = "eti-tools python3-core tsniv2ni"
 
 SRC_URI = "git://github.com/satdreamgr/dabstreamer.git"
 

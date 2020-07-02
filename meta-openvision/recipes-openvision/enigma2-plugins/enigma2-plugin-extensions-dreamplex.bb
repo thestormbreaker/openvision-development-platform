@@ -8,7 +8,7 @@ inherit autotools-brokensep gitpkgv python3native gettext rm_python_pyc compile_
 PV = "2.1.3+git${SRCPV}"
 PKGV = "2.1.3+git${GITPKGV}"
 
-DEPENDS = "python virtual/gettext"
+DEPENDS = "python3 virtual/gettext"
 RDEPENDS_${PN} += "curl mjpegtools python3-ctypes libshowiframe0"
 
 SRC_URI = " \

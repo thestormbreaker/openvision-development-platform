@@ -15,7 +15,7 @@ S = "${WORKDIR}/${SRCNAME}-${PV}"
 
 inherit distutils3
 
-RDEPENDS_${PN} = "python-core"
+RDEPENDS_${PN} = "python3-core"
 RDEPENDS_{PN}-src = "${PN}"
 FILES_${PN}-src = " \
 	${libdir}/${PYTHON_DIR}/site-packages/*.py \

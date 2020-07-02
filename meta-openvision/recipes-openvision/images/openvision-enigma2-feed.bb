@@ -81,18 +81,16 @@ OPTIONAL_PACKAGES += "\
 	pv \
 	pyload \
 	python3-beautifulsoup4 \
-	python3-futures \
 	python3-iso3166 \
-	python3-iso639 \
+	python-iso639 \
 	python3-isodate \
-	python3-js2py \
+	python-js2py \
 	python3-lxml \
 	python-mechanize \
 	python3-ntplib \
 	python3-pip \
-	python3-pyexecjs \
+	python-pyexecjs \
 	python3-requests \
-	python-singledispatch \
 	python-websocket \
 	${@bb.utils.contains("TARGET_FPU", "soft", "", "rclone", d)} \
 	rsync \
