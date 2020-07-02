@@ -79,7 +79,7 @@ ENIGMA2_PLUGINS += "\
 	enigma2-plugin-softcams-oscam \
 	enigma2-plugin-systemplugins-osd3dsetup", d)} \
 	${@bb.utils.contains_any("MACHINE_FEATURES", "smallflash middleflash", "", " \
-	enigma2-plugin-extensions-openwebif-vision-terminal", d)} \
+	enigma2-plugin-extensions-openwebif-terminal", d)} \
 	"
 
 DEPENDS += "\
