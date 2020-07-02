@@ -37,8 +37,7 @@ PROVIDES = "\
     "
 
 DEPENDS = "\
-    bitratecalc \
-    python-pycurl \
+    python3-pycurl \
     "
 
 DESCRIPTION_enigma2-plugin-extensions-arbouquet = "Add remove bouquet plugin by 2boom"

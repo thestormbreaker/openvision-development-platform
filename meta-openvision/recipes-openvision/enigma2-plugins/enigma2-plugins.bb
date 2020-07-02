@@ -167,9 +167,6 @@ LDFLAGS += "-ltirpc"
 
 RRECOMMENDS_enigma2-plugin-extensions-transmission = "transmission transmission-client"
 
-DEPENDS_enigma2-plugin-extensions-bitrateviewer = "bitratecalc"
-RDEPENDS_enigma2-plugin-extensions-bitrateviewer = "bitratecalc"
-
 RREPLACES_enigma2-plugin-skincomponents-eventlist = "enigma2-plugin-components-eventlist"
 RCONFLICTS_enigma2-plugin-skincomponents-eventlist = "enigma2-plugin-components-eventlist"
 
