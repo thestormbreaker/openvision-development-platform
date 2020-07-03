@@ -57,7 +57,6 @@ OPTIONAL_PACKAGES += "\
 	joe \
 	less \
 	libbluray \
-	libsdl2 \
 	libudfread \
 	lirc \
 	mc \
@@ -71,7 +70,6 @@ OPTIONAL_PACKAGES += "\
 	ntfs-3g \
 	ntp \
 	ofgwrite \
-	openmultiboot \
 	openresolv \
 	openssh \
 	openvpn \
@@ -79,7 +77,6 @@ OPTIONAL_PACKAGES += "\
 	ppp \
 	procps \
 	pv \
-	pyload \
 	python3-beautifulsoup4 \
 	python3-iso3166 \
 	python-iso639 \
@@ -95,7 +92,6 @@ OPTIONAL_PACKAGES += "\
 	${@bb.utils.contains("TARGET_FPU", "soft", "", "rclone", d)} \
 	rsync \
 	rtorrent \
-	sabnzbd \
 	samba \
 	satipclient \
 	screen \
@@ -166,51 +162,25 @@ ENIGMA2_OPTIONAL += "\
 	${@bb.utils.contains("EXTRA_IMAGEDEPENDS", "vuplus-tuner-turbo", "enigma2-plugin-drivers-dvb-usb-turbo", "", d)} \
 	enigma2-plugin-drivers-usbserial \
 	enigma2-plugin-extensions-arabicsavior \
-	enigma2-plugin-extensions-automatic-fullbackup \
 	enigma2-plugin-extensions-backupsuite \
 	enigma2-plugin-extensions-bhweather \
-	enigma2-plugin-extensions-blurayplayer \
 	enigma2-plugin-extensions-dlnabrowser \
 	enigma2-plugin-extensions-dlnaserver \
-	enigma2-plugin-extensions-dreamplex \
 	enigma2-plugin-extensions-e2iplayer \
-	enigma2-plugin-extensions-epgimport \
-	enigma2-plugin-extensions-fontinfo \
-	enigma2-plugin-extensions-hdmitest \
-	enigma2-plugin-extensions-historyzapselector \
 	${@bb.utils.contains("MACHINE_FEATURES", "libeplayer", "", "enigma2-plugin-extensions-install-exteplayer3", d)} \
 	enigma2-plugin-extensions-install-ffmpeg \
 	${@bb.utils.contains("MACHINE_FEATURES", "libeplayer", "", "enigma2-plugin-extensions-install-gstplayer", d)} \
-	enigma2-plugin-extensions-keyadder \
 	${@bb.utils.contains_any("MACHINE_FEATURES", "azbox", "enigma2-plugin-extensions-keymapconfig enigma2-plugin-extensions-rsiconfig enigma2-plugin-extensions-rsimediacenter enigma2-plugin-systemplugins-ofwlauncher enigma2-plugin-extensions-aziptv enigma2-plugin-extensions-azplay", "", d)} \
-	${@bb.utils.contains_any("MACHINE_FEATURES", "colorlcd colorlcd220 colorlcd390 colorlcd400 colorlcd480 colorlcd720 colorlcd800 bwlcd140 bwlcd255", "enigma2-plugin-extensions-lcd4linux", "", d)} \
-	enigma2-plugin-extensions-managerautofs \
-	enigma2-plugin-extensions-merlininfo \
-	enigma2-plugin-extensions-modifyplifullhd \
-	enigma2-plugin-extensions-moviemanager \
-	enigma2-plugin-extensions-openmultiboot \
-	enigma2-plugin-extensions-raedquicksignal \
-	enigma2-plugin-extensions-refreshbouquet \
-	${@bb.utils.contains_any("MACHINE", "cube su980", "", "enigma2-plugin-extensions-sdgradio", d)} \
-	enigma2-plugin-extensions-tmbd \
-	enigma2-plugin-extensions-vcs \
 	enigma2-plugin-extensions-weathermsn \
-	enigma2-plugin-extensions-xmodem \
 	enigma2-plugin-extensions-yahooweather \
 	enigma2-plugin-extensions-youtube \
 	enigma2-plugin-security-firewall \
 	enigma2-plugin-skins-blacktransfhd-raed \
 	enigma2-plugin-skins-bundesligafhd-raed \
-	enigma2-plugin-skins-cinogripli \
 	enigma2-plugin-skins-dreamplexskins \
 	enigma2-plugin-skins-glamouraurafhd \
-	enigma2-plugin-skins-hdlinesuper-raed \
 	enigma2-plugin-skins-iflatfhd \
-	enigma2-plugin-skins-kravenfhd \
-	enigma2-plugin-skins-kravenhd \
-	enigma2-plugin-skins-kravenvb \
 	enigma2-plugin-skins-maxfhdxta-raed \
-	enigma2-plugin-skins-metrix-vision \
 	enigma2-plugin-skins-mxblack-raed \
 	enigma2-plugin-skins-mxhq9b-raed \
 	enigma2-plugin-skins-mx-hq7 \
@@ -219,32 +189,19 @@ ENIGMA2_OPTIONAL += "\
 	enigma2-plugin-skins-octetfhd \
 	enigma2-plugin-skins-openvix \
 	enigma2-plugin-skins-pli-hd-fullnight \
-	enigma2-plugin-skins-sevenhd \
-	enigma2-plugin-skins-simple-gray-hd \
 	enigma2-plugin-skins-turbo-raed \
 	enigma2-plugin-skins-turquoisehd \
 	enigma2-plugin-skins-universehd \
-	enigma2-plugin-skins-xionhdf \
 	enigma2-plugin-skins-whitetransfhd-raed \
-	enigma2-plugin-systemplugins-crossepg \
-	enigma2-plugin-systemplugins-extnumberzap \
-	enigma2-plugin-systemplugins-extrafancontrol \
-	enigma2-plugin-systemplugins-hrtunerproxy \
 	${@bb.utils.contains("MACHINE_FEATURES", "micom", "enigma2-plugin-systemplugins-micomupgrade" , "", d)} \
-	enigma2-plugin-systemplugins-mountmanager \
 	enigma2-plugin-systemplugins-netspeedtest \
-	enigma2-plugin-systemplugins-newvirtualkeyboard \
 	enigma2-plugin-systemplugins-radiotimesemulator \
-	${@bb.utils.contains("MACHINE_FEATURES", "libeplayer", "", "enigma2-plugin-systemplugins-serviceapp", d)} \
-	enigma2-plugin-systemplugins-signalfinder \
-	enigma2-plugin-systemplugins-quadpip \
 	enigma2-plugins \
 	meta-enigma2-dvdburn \
-	openvision-core-plugin \
 	packagegroup-openplugins \
 	picons-enigma2-meta \
 	softcams-enigma2-meta \
 	${OPTIONAL_BSP_ENIGMA2_PACKAGES} \
 	"
 
-DEPENDS += "${OPTIONAL_PACKAGES} ${ENIGMA2_OPTIONAL} ${EXTRA_WIFI_DRIVERS} enigma2-2boom-plugins"	
+DEPENDS += "${OPTIONAL_PACKAGES} ${ENIGMA2_OPTIONAL} ${EXTRA_WIFI_DRIVERS}"	
